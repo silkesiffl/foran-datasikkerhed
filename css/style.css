@@ -1,7 +1,13 @@
+/*Variables*/
 body {
   background: linear-gradient(45deg, #D4E5F7, #ADCDF4, #78B3ED);
+  margin: 0;
 }
 
+/*Nav*/
+nav {
+  padding: 1.2em 1em;
+}
 nav img {
   height: 30px;
   width: auto;
@@ -12,6 +18,47 @@ nav img:hover {
   transform: scale(1.1);
 }
 
+/*Hero sektion*/
+.hero {
+  padding: 2em 5em;
+  margin-top: 12em;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+h1 img {
+  height: auto;
+  width: 250px;
+}
+h1 span {
+  font-size: 36px;
+  font-style: italic;
+  color: #1F386B;
+  margin-left: 2.5em;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: "tekst pil";
+}
+.hero-content p {
+  grid-area: tekst;
+  color: #1F386B;
+  align-self: center;
+}
+.hero-content img {
+  grid-area: pil;
+  height: 200px;
+  width: auto;
+  align-self: center;
+  justify-self: end;
+}
+
+/*Faresignaler*/
 .faresignaler-grid {
   display: grid;
   grid-template: repeat(6, 1fr)/repeat(3, 1fr);
@@ -20,14 +67,15 @@ nav img:hover {
 
 .faresignaler {
   border: 2px solid #F52D00;
-  border-radius: 15px;
+  border-radius: 12px;
   justify-self: center;
   align-self: center;
   padding: 0.5rem 1rem;
 }
-
 .faresignaler h3 {
   margin: 0;
+  color: #1F386B;
+  font-size: 18px;
 }
 
 .signal-1 {
@@ -52,4 +100,13 @@ nav img:hover {
 
 .signal-6 {
   grid-area: 6/2/7/3;
+}
+
+/*Footer*/
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer p {
+  color: #1F386B;
 }/*# sourceMappingURL=style.css.map */
