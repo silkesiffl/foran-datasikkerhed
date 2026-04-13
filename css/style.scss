@@ -1,6 +1,8 @@
 /*Variables*/
 
 $text-color: #1F386B;
+$text-hover:#081021; 
+$accent-color: #F52D00;
 
 body{
     background: linear-gradient(45deg, #D4E5F7, #ADCDF4, #78B3ED);
@@ -15,19 +17,20 @@ nav{
     img{
     height: 30px;
     width: auto;
-    transform: scale(1.03);
+    transition: 0.2 ease;
+}
+img:hover{
+    transform: scale(1.05);
 }
 }
 
-nav img:hover{
-    transform: scale(1.1);
-}
 
 /*Hero sektion*/
 
 .hero{
     padding: 2em 5em;
     margin-top: 12em;
+    margin-bottom: 4em;
 }
 
 h1{
@@ -64,10 +67,19 @@ h1{
         height: 200px;
         width: auto;
         align-self: center;
-        justify-self: end;
+        justify-self: end; 
     }
 
 }
+
+/*Tekst section*/
+
+.info-section{
+    padding: 2em 4em;
+    color: $text-color;
+    max-width: 120ch;
+}
+
 
 /*Faresignaler*/
 
@@ -78,16 +90,44 @@ h1{
 }
 
 .faresignaler {
-  border: 2px solid #F52D00;
+  border: 1.8px solid $accent-color;
   border-radius: 12px;
   justify-self: center;
   align-self: center;
   padding: 0.5rem 1rem;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
 
   h3{
     margin: 0;
-    color: #1F386B;
+    color: $text-color;
     font-size: 18px;
+  }
+
+  &:hover{
+    background: #D4E5F7;
+  }
+
+  p {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%);
+    width: 260px;
+    padding: 1rem;
+    background-color: #D4E5F7;
+    color: $text-color;
+    border: 1.5px solid $accent-color;
+    border-radius: 8px;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+  }
+
+  &:hover p {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -97,23 +137,50 @@ h1{
 
 .signal-2{
     grid-area: 1 / 3 / 2 / 4;
+    animation-delay: 0.5s;
 }
 
 .signal-3{
     grid-area: 3 / 2 / 4 / 3;
+    animation-delay: 1s;
 }
 
 .signal-4{
     grid-area: 4 / 3 / 5 / 4;
+    animation-delay: 1.5s;
 }
 
 .signal-5{
     grid-area: 5 / 1 / 6 / 2;
+    animation-delay: 2s;
 }
 
 .signal-6{
     grid-area: 6 / 2 / 7 / 3;
+    animation-delay: 2.5s;
 }
+
+/*Faresignaler animation*/
+
+@keyframes float {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+ 
+  }
+}
+
+.faresignaler:hover {
+  animation-play-state: paused;
+}
+
 
 
 /*Footer*/
@@ -121,8 +188,14 @@ h1{
 footer{
     display: flex;
     justify-content: space-between;
+    padding: 0.5em 2.5em;
 
     p{
-        color: #1F386B;
+        color: $text-color;
+    }
+
+    p:hover{
+        color: $text-hover;
     }
 }
+
