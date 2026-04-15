@@ -2,6 +2,8 @@
 body {
   background: linear-gradient(45deg, #D4E5F7, #ADCDF4, #78B3ED);
   margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
 }
 
 /*Nav*/
@@ -24,22 +26,75 @@ nav img:hover {
   margin-bottom: 4em;
 }
 
-h1 {
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.visual-h1 {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
-h1 img {
+.visual-h1 img {
   height: auto;
   width: 250px;
 }
-h1 span {
-  font-size: 36px;
+.visual-h1 .changing-word {
+  position: relative;
+  display: block;
+  height: 1.2em;
+  width: 132px;
+  text-align: right;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 32px;
   font-style: italic;
   color: #1F386B;
   margin-left: 2.5em;
 }
+.visual-h1 .changing-word span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  animation: changeWord 9s ease-out infinite;
+}
+.visual-h1 .changing-word span:nth-child(1) {
+  animation-delay: 0s;
+}
+.visual-h1 .changing-word span:nth-child(2) {
+  animation-delay: 3s;
+}
+.visual-h1 .changing-word span:nth-child(3) {
+  animation-delay: 6s;
+}
 
+@keyframes changeWord {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  7% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  26% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+}
 .hero-content {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -52,10 +107,10 @@ h1 span {
 }
 .hero-content img {
   grid-area: pil;
-  height: 200px;
-  width: auto;
   align-self: center;
   justify-self: end;
+  height: 220px;
+  width: auto;
 }
 
 /*Tekst section*/
@@ -63,6 +118,11 @@ h1 span {
   padding: 2em 4em;
   color: #1F386B;
   max-width: 120ch;
+}
+.info-section h2 {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
 }
 
 /*Faresignaler*/
@@ -84,7 +144,8 @@ h1 span {
 .faresignaler h3 {
   margin: 0;
   color: #1F386B;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
 }
 .faresignaler:hover {
   background: #D4E5F7;

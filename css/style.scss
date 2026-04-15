@@ -3,10 +3,16 @@
 $text-color: #1F386B;
 $text-hover:#081021; 
 $accent-color: #F52D00;
+$font-body: "Nunito Sans", sans-serif;
+$font-heading: "Cal Sans", sans-serif;
+$font-body-size: 16px;
+
 
 body{
     background: linear-gradient(45deg, #D4E5F7, #ADCDF4, #78B3ED);
     margin: 0;
+    font-family: $font-body;
+    font-size: $font-body-size;
 }
 
 /*Nav*/
@@ -33,7 +39,16 @@ img:hover{
     margin-bottom: 4em;
 }
 
-h1{
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.visual-h1{
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -42,13 +57,67 @@ h1{
         height: auto;
         width: 250px;
     }
+  
 
-    span{
-        font-size: 36px;
-        font-style: italic;
-        color: $text-color;
-        margin-left: 2.5em;
-    }
+    .changing-word{
+    position: relative;
+    display: block;
+    height: 1.2em;
+    width: 132px;
+    text-align: right;
+    font-family: $font-body;
+    font-size: 32px;
+    font-style: italic;
+    color: $text-color;
+    margin-left: 2.5em;
+
+    span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    animation: changeWord 9s ease-out infinite;
+  }
+
+    span:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+    span:nth-child(2) {
+    animation-delay: 3s;
+  }
+
+    span:nth-child(3) {
+    animation-delay: 6s;
+  }  
+}
+}
+
+@keyframes changeWord {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  7% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  26% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
 }
 
 .hero-content{
@@ -61,15 +130,13 @@ h1{
         color: $text-color;
         align-self: center;
     }
-
-    img{
-        grid-area: pil;
-        height: 200px;
-        width: auto;
-        align-self: center;
-        justify-self: end; 
-    }
-
+        img{
+          grid-area: pil;
+          align-self: center;
+          justify-self: end; 
+          height: 220px;
+          width: auto;
+        }
 }
 
 /*Tekst section*/
@@ -78,6 +145,12 @@ h1{
     padding: 2em 4em;
     color: $text-color;
     max-width: 120ch;
+
+    h2{
+      font-family: $font-heading;
+      font-weight: 400;
+      font-size: 26px;
+    }
 }
 
 
@@ -101,7 +174,8 @@ h1{
   h3{
     margin: 0;
     color: $text-color;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: $font-body;
   }
 
   &:hover{

@@ -6,6 +6,11 @@
     <title>Foran datasikkerhed</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lalezar&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Squada+One&display=swap" rel="stylesheet">
+   
+
 </head>
 
 <body>
@@ -22,10 +27,21 @@
 
         <section class="hero">
 
-            <h1>
-                <img src="img/foranlogo2.svg" alt="foran">
-                <span class="changing-word">phishing</span>
-            </h1>
+<!--Jeg ønskede at bruge det specialdesignede Foran-logo i heroen, som er lavet som SVG og derfor ikke kan skrives som almindelig tekst uden at miste det visuelle udtryk.
+Derfor har jeg lavet en separat h1 med classen sr-only, så hovedoverskriften stadig findes som rigtig tekst i HTML'en og kan læses af skærmlæsere.
+Den synlige version med logoet og de animerede ord er skjult for skærmlæsere med aria-hidden="true", så indholdet ikke bliver læst dobbelt.-->
+
+
+            <h1 class="sr-only">Foran phishing</h1>
+
+            <div class="visual-h1" aria-hidden="true">
+                <img src="img/foranlogo2.svg" alt="">
+                <span class="changing-word">
+                    <span>svindlerne</span>
+                    <span>scammerne</span>
+                    <span>phishing</span>
+                </span>
+            </div>
 
             <div class="hero-content">
 
