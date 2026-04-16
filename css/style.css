@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Variables*/
 body {
   background: linear-gradient(45deg, #D4E5F7, #ADCDF4, #78B3ED);
@@ -36,16 +37,16 @@ nav img:hover {
   overflow: hidden;
 }
 
-.visual-h1 {
+.visual-heading {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
-.visual-h1 img {
+.visual-heading img {
   height: auto;
   width: 250px;
 }
-.visual-h1 .changing-word {
+.visual-heading .changing-word {
   position: relative;
   display: block;
   height: 1.2em;
@@ -57,20 +58,20 @@ nav img:hover {
   color: #1F386B;
   margin-left: 2.5em;
 }
-.visual-h1 .changing-word span {
+.visual-heading .changing-word span {
   position: absolute;
   right: 0;
   top: 0;
   opacity: 0;
   animation: changeWord 9s ease-out infinite;
 }
-.visual-h1 .changing-word span:nth-child(1) {
+.visual-heading .changing-word span:nth-child(1) {
   animation-delay: 0s;
 }
-.visual-h1 .changing-word span:nth-child(2) {
+.visual-heading .changing-word span:nth-child(2) {
   animation-delay: 3s;
 }
-.visual-h1 .changing-word span:nth-child(3) {
+.visual-heading .changing-word span:nth-child(3) {
   animation-delay: 6s;
 }
 
@@ -115,6 +116,9 @@ nav img:hover {
   justify-self: end;
   height: 220px;
   width: auto;
+}
+.hero-content .lær-mere {
+  display: none;
 }
 
 /*Tekst section*/
@@ -232,4 +236,69 @@ footer p {
 }
 footer p:hover {
   color: #081021;
+}
+
+/*Mobil version*/
+@media (max-width: 768px) {
+  .hero {
+    padding: 1em 2em;
+    margin-top: 5em;
+  }
+  .visual-heading img {
+    width: 200px;
+    height: auto;
+  }
+  .visual-heading .changing-word {
+    width: 112px;
+    font-size: 24px;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-content p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 3em 0.2em;
+  }
+  .hero-content img {
+    display: none;
+  }
+  .hero-content .lær-mere {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 6em;
+    margin-left: 1em;
+    align-self: flex-end;
+  }
+  .hero-content .lær-mere span {
+    color: #1F386B;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .hero-content .lær-mere img {
+    width: 24px;
+    height: auto;
+    display: block;
+  }
+  /*Tekst section*/
+  .info-section {
+    padding: 1em 1.4em;
+    max-width: 60ch;
+  }
+  .info-section h2 {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  /*Footer*/
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5em 1em;
+  }
 }/*# sourceMappingURL=style.css.map */

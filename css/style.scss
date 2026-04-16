@@ -6,6 +6,8 @@ $accent-color: #F52D00;
 $font-body: "Nunito Sans", sans-serif;
 $font-heading: "Cal Sans", sans-serif;
 $font-body-size: 16px;
+$breakpoint-mobile: 768px;
+
 
 
 body{
@@ -49,7 +51,7 @@ img:hover{
   overflow:hidden;
 }
 
-.visual-h1{
+.visual-heading{
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -140,6 +142,10 @@ img:hover{
           justify-self: end; 
           height: 220px;
           width: auto;
+        }
+
+        .lær-mere{
+          display: none;
         }
 }
 
@@ -275,5 +281,92 @@ footer{
     p:hover{
         color: $text-hover;
     }
+}
+
+
+/*Mobil version*/
+
+@media (max-width: $breakpoint-mobile) {
+
+  .hero{
+    padding: 1em 2em;
+    margin-top: 5em;
+  }
+
+  .visual-heading{
+
+    img{
+      width: 200px;
+      height: auto;
+    }
+
+    .changing-word{
+      width: 112px;
+      font-size: 24px;
+    }
+  }
+
+  .hero-content{
+    display: flex;
+    flex-direction: column;
+
+    p{
+      font-size: 16px;
+      line-height: 1.4;
+      margin: 3em 0.2em;
+    }
+
+    img{
+      display: none;
+    }
+
+    .lær-mere {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 6em;
+    margin-left: 1em;
+    align-self: flex-end;
+
+    span {
+      color: $text-color;
+      font-family: $font-body;
+      font-size: 1.2rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    img {
+      width: 24px;
+      height: auto;
+      display: block;
+    }
+  }
+  }
+
+/*Tekst section*/
+
+.info-section{
+  padding: 1em 1.4em;
+  max-width: 60ch;
+
+    h2{
+      font-family: $font-heading;
+      font-weight: 400;
+      font-size: 20px;
+    }
+}
+
+/*Footer*/
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0.5em 1em;
+}
+
+
+
 }
 
