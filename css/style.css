@@ -26,6 +26,7 @@ nav img:hover {
   margin-bottom: 4em;
 }
 
+/*The recommended styles from WebAim for visually hiding content that will be read by a screen reader*/
 .sr-only {
   position: absolute;
   left: -10000px;
