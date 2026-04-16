@@ -100,11 +100,14 @@ nav img:hover {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-areas: "tekst pil";
+  margin-top: 2em;
 }
 .hero-content p {
   grid-area: tekst;
   color: #1F386B;
   align-self: center;
+  line-height: 1.6;
+  font-size: 18px;
 }
 .hero-content img {
   grid-area: pil;
@@ -222,6 +225,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0.5em 2.5em;
+  border-top: 1px solid #1F386B;
 }
 footer p {
   color: #1F386B;
