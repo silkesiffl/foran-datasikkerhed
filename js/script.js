@@ -1,7 +1,7 @@
 // Faresignal knapper
 
 // Finder alle faresignal-knapper
-const buttons = document.querySelectorAll(".button-faresignal");
+const buttons = document.querySelectorAll(".button-faresignaler");
 
 // Tilføjer et klik-event til hver knap
 buttons.forEach((button) => {
@@ -14,3 +14,4 @@ buttons.forEach((button) => {
     button.setAttribute("aria-expanded", isOpen);
   });
 });
+ 

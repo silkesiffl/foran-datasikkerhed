@@ -206,7 +206,7 @@ img:hover{
     left: 50%;
     bottom: 100%;
     transform: translate(-50%);
-    width: 260px;
+    width: 270px;
     padding: 1rem;
     background-color: #D4E5F7;
     color: $text-color;
@@ -278,6 +278,45 @@ img:hover{
 
 .faresignaler:hover {
   animation-play-state: paused;
+}
+
+/*Scenario*/
+
+.scenario-card{
+  width: min(90vw, 1100px);
+  min-height: clamp(240px, 30vw, 300px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  margin: 0 auto;
+
+  h2{
+    font-size: 20px;
+    font-family: $font-heading;
+    font-weight: 400;
+    color: $text-color;
+  }
+
+  button{
+    background-color: transparent;
+    border-radius: 30px;
+    border: 2px solid $accent-color;
+    padding: 0.7em 3em;
+    font-family: $font-body;
+    font-size: 16px;
+    font-weight: 700;
+    color: $text-color;
+    margin-top: 1em;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background: #062343;
+  }
 }
 
 
@@ -410,8 +449,6 @@ footer{
 .signal-6 {
   align-self: center;
 }
-
-
 
 /*Footer*/
 

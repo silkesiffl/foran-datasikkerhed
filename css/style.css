@@ -173,7 +173,7 @@ nav img:hover {
   left: 50%;
   bottom: 100%;
   transform: translate(-50%);
-  width: 260px;
+  width: 270px;
   padding: 1rem;
   background-color: #D4E5F7;
   color: #1F386B;
@@ -237,6 +237,41 @@ nav img:hover {
 }
 .faresignaler:hover {
   animation-play-state: paused;
+}
+
+/*Scenario*/
+.scenario-card {
+  width: min(90vw, 1100px);
+  min-height: clamp(240px, 30vw, 300px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  margin: 0 auto;
+}
+.scenario-card h2 {
+  font-size: 20px;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  color: #1F386B;
+}
+.scenario-card button {
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid #F52D00;
+  padding: 0.7em 3em;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1F386B;
+  margin-top: 1em;
+  cursor: pointer;
+}
+.scenario-card button:hover {
+  background: #062343;
 }
 
 /*Footer*/
