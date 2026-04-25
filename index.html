@@ -130,6 +130,7 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
 
         </section>
         
+<!--Forgrenet scenarie section-->
 
         <section class="info-section">
 
@@ -137,12 +138,55 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
             <p>Prøv vores interaktive scenarie og oplev, hvordan virkelige svindlere forsøger at lokke dig i fælden. Bliv bedre til at genkende faresignalerne og kom foran svindlerne.</p>
         </section>
 
-        <section class="phishing-scenario">
-            <div class="scenario-card">
+<!--Forgrenet scenarie-->
+
+        <section class="stage active">
                 <h2>Test dig selv, og se om du kan gennemsku phishing</h2>
-                <button id="scenario-button">Start nu</button>
+                <button class="btn">Start nu</button>
+        </section>
+
+         <section class="stage">
+                <h2>Din bedste ven har fødselsdag om to dage</h2>
+                <p>Du har bestilt en gave online, og venter nu på at DAO leverer pakken.</p>
+                <button class="btn">Fortsæt</button>
+        </section>
+
+         <section class="stage">
+                <h2>Du modtager en SMS i samme beskedtråd som tidligere beskeder fra DAO.</h2>
+                <p class="bold-text">Der står:</p>
+                <p>“Din pakke er tilbageholdt på grund af manglende vejnummer på pakken. Opdater venligst dine forsendelsesoplysninger: https://dao-ak.com/A/S. Vh DAO.”</p>
+                <p class="bold-text">Hvad gør du?</p>
+            <div class="choices">
+                <button class="btn">A) Beskeden ligger i samme tråd som tidligere DAO-beskeder, så jeg klikker på linket</button>
+                <button class="btn">B) Noget virker mærkeligt, så jeg tjekker DAO’s hjemmeside i stedet</button>
             </div>
         </section>
+
+         <section class="stage">
+                <h2>Trykker på linket</h2>
+                <p>Under linket står der, at de mangler din adresse og et gebyr på 5 kr for at opdatere oplysningerne.</p>
+                <p class="bold-text">Hvad gør du?</p>
+            <div class="choices">
+                <button class="btn">A) Afsender ser rigtig ud, så jeg indtaster mine oplysninger og trykker godkend</button>
+                <button class="btn">B) Det virker mistænkeligt, at jeg skal betale et ekstra gebyr, så jeg tjekker DAO’s hjemmeside i stedet</button>
+        </section>
+
+         <section class="stage">
+                <h2>Du tjekker DAO's hjemmeside</h2>
+                <p>Du kommer ind på DAO’s hjemmeside, og der står ingenting om manglende leveringsoplysninger, kun at pakken stadig er på vej.</p>
+                <p>Godt valgt! Selvom beskeden ligger i samme SMS-tråd som tidligere ægte beskeder fra DAO, betyder det ikke nødvendigvis, at den nye besked også er sendt af DAO. Svindlere er blevet dygtigere, og falske beskeder kan i nogle tilfælde placere sig i samme tråd som rigtige beskeder ved hjælp af såkaldt SMS-spoofing.</p>
+                <button class="btn">Start forfra</button>
+        </section>
+
+        <section class="stage">
+                <h2>Du indtaster dine betalingsoplysninger og trykker godkend</h2>
+                <p>Du får en tilbagebesked om at dine oplysninger nu er opdateret, og pakken er på vej. Et par dage senere modtager du pakken, men du opdager også at der er trukket mistænksomme gebyrer på dit kort. Du kontakter banken som kan fortælle dig at dine kortoplysninger er blevet brugt til at tømme din konto.</p>
+                <p>Du finder ud af at selvom SMS’en blev sendt i tråd med rigtige DAO beskeder var det en scam besked, og du fik givet dine kortoplysninger til en der har misbrugt dem. Øv...</p>
+                <p>Det er vigtigt ikke bare at stole på en besked også selvom afsender ser rigtig ud, da snyderne bliver dygtigere og dygtigere. Tænk altid en ekstra gang inden du opgiver private oplysninger og log ind på virksomhedens hjemmeside for at se om informationen stemmer overens. </p>
+                <button class="btn">Start forfra</button>
+        </section>
+
+
     </main>
 
     <footer>

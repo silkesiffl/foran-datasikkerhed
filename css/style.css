@@ -184,9 +184,11 @@ nav img:hover {
 }
 .faresignaler:hover {
   background: #D4E5F7;
+  transition: 0.3s ease-in-out;
 }
 .faresignaler.is-open {
   background: #D4E5F7;
+  transition: 0.3s ease-in-out;
 }
 
 .faresignaler.is-open p {
@@ -239,39 +241,65 @@ nav img:hover {
   animation-play-state: paused;
 }
 
-/*Scenario*/
-.scenario-card {
+.stage {
   width: min(90vw, 1100px);
-  min-height: clamp(240px, 30vw, 300px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  min-height: auto;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(120, 179, 237, 0.35);
   border-radius: 16px;
-  margin: 0 auto;
+  margin: 0 auto 1.5em auto;
+  padding: 2em 1em;
+  box-sizing: border-box;
+  display: none;
 }
-.scenario-card h2 {
-  font-size: 20px;
-  font-family: "Cal Sans", sans-serif;
-  font-weight: 400;
+.stage.active {
+  display: block;
+}
+.stage h2 {
+  font-size: 18px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
   color: #1F386B;
+  margin: 0 0 0.6em 0;
 }
-.scenario-card button {
+.stage p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #1F386B;
+  padding: 0;
+  margin: 0.4em auto;
+  max-width: 70ch;
+  line-height: 1.6;
+}
+.stage .bold-text {
+  font-weight: 700;
+}
+.stage button {
   background-color: transparent;
   border-radius: 30px;
-  border: 2px solid #F52D00;
+  border: 1.5px solid #F52D00;
   padding: 0.7em 3em;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #1F386B;
-  margin-top: 1em;
+  margin-top: 1.2em;
   cursor: pointer;
 }
-.scenario-card button:hover {
-  background: #062343;
+.stage button:hover {
+  background: #D4E5F7;
+  transition: 0.3s ease-in-out;
+}
+
+.choices {
+  margin-top: 1.5em;
+}
+.choices .btn {
+  display: block;
+  width: min(90%, 700px);
+  margin: 1em auto 0 auto;
+  text-align: left;
+  padding: 0.7em 1.5em;
 }
 
 /*Footer*/
