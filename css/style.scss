@@ -4,7 +4,7 @@ $text-color: #1F386B;
 $text-hover:#081021; 
 $accent-color: #F52D00;
 $font-body: "Nunito Sans", sans-serif;
-$font-heading: "Cal Sans", sans-serif;
+$font-heading: "Hanken Grotesk", sans-serif;
 $font-body-size: 16px;
 $breakpoint-mobile: 768px;
 
@@ -32,9 +32,7 @@ img:hover{
 }
 }
 
-
 /*Hero sektion*/
-
 .hero{
     padding: 2em 5em;
     margin-top: 12em;
@@ -55,13 +53,10 @@ img:hover{
     display: flex;
     flex-direction: column;
     align-items: start;
-
     img{
         height: auto;
         width: 250px;
     }
-  
-
     .changing-word{
     position: relative;
     display: block;
@@ -73,7 +68,6 @@ img:hover{
     font-style: italic;
     color: $text-color;
     margin-left: 2.5em;
-
     span {
     position: absolute;
     right: 0;
@@ -81,7 +75,6 @@ img:hover{
     opacity: 0;
     animation: changeWord 9s ease-out infinite;
   }
-
     span:nth-child(1) {
     animation-delay: 0s;
   }
@@ -143,14 +136,9 @@ img:hover{
           height: 220px;
           width: auto;
         }
-
-        .lær-mere{
-          display: none;
-        }
 }
 
 /*Tekst section*/
-
 .info-section{
     padding: 2em 4em;
     color: $text-color;
@@ -158,7 +146,7 @@ img:hover{
 
     h2{
       font-family: $font-heading;
-      font-weight: 400;
+      font-weight: 600;
       font-size: 26px;
     }
 }
@@ -303,6 +291,7 @@ img:hover{
     font-weight: 600;
     color: $text-color;
     margin: 0 0 0.6em 0;
+   
   }
 
   p {
@@ -311,9 +300,8 @@ img:hover{
     color: $text-color;
     padding: 0;
     margin: 0.4em auto;
-    max-width: 70ch;
-    line-height: 1.6;
-    
+    max-width: 50ch;
+    line-height: 1.6;    
   }
 
   .bold-text{
@@ -369,7 +357,6 @@ footer{
     }
 }
 
-
 /*Mobil version*/
 
 @media (max-width: $breakpoint-mobile) {
@@ -377,6 +364,7 @@ footer{
   .hero{
     padding: 1em 2em;
     margin-top: 5em;
+    margin-bottom: 0em;
   }
 
   .visual-heading{
@@ -399,46 +387,41 @@ footer{
     p{
       font-size: 16px;
       line-height: 1.4;
-      margin: 3em 0.2em;
+      margin: 3em 0em;
     }
 
     img{
       display: none;
     }
-
-    .lær-mere {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    margin-top: 6em;
-    margin-left: 1em;
-    align-self: flex-end;
-
-    span {
-      color: $text-color;
-      font-family: $font-body;
-      font-size: 1.2rem;
-      font-weight: 600;
-      font-style: italic;
-    }
-
-    img {
-      width: 24px;
-      height: auto;
-      display: block;
-    }
   }
-  }
+
+.marker {
+  position: relative;
+  display: inline-block;
+}
+
+.marker::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25em;
+  width: 100%;
+  height: 3px;
+  background: $accent-color;
+  border-radius: 10px;
+  transform: rotate(-1.5deg);
+}
+
 
 /*Tekst section*/
 
 .info-section{
-  padding: 1em 1.4em;
-  max-width: 60ch;
+  padding: 1em 2em;
+  max-width: 50ch;
 
     h2{
       font-family: $font-heading;
-      font-weight: 400;
+      font-weight: 550;
       font-size: 20px;
     }
 }
@@ -480,6 +463,10 @@ footer{
 
 .signal-6 {
   align-self: center;
+}
+
+.stage p{
+  max-width: 40ch;
 }
 
 /*Footer*/

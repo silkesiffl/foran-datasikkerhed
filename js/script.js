@@ -63,5 +63,5 @@ const nextStage = (e) =>{
 for (const btn of btns) {
     btn.addEventListener("click", nextStage)
 }
-    
+
  
