@@ -1,5 +1,4 @@
 // Faresignal knapper
-
 // Finder alle faresignal-knapper
 const buttons = document.querySelectorAll(".button-faresignaler");
 

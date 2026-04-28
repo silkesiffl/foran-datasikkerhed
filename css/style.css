@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
+  color: #1F386B;
 }
 
 /*Nav*/
@@ -14,7 +15,7 @@ nav {
 nav img {
   height: 30px;
   width: auto;
-  transition: 0.2 ease;
+  transition: 0.2s ease;
 }
 nav img:hover {
   transform: scale(1.05);
@@ -27,14 +28,16 @@ nav img:hover {
   margin-bottom: 4em;
 }
 
-/*The recommended styles from WebAim for visually hiding content that will be read by a screen reader*/
+/*The recommended styles from A11Y collective for visually hiding content that will be read by a screen reader*/
 .sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
+  border: 0;
+  clip-path: inset(50%);
   height: 1px;
+  margin: 0;
   overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .visual-heading {
@@ -145,12 +148,10 @@ nav img:hover {
   padding: 0.5rem 1rem;
   position: relative;
   animation: float 4s ease-in-out infinite;
+  transition: background 0.3s ease-in-out;
 }
 .faresignaler h3 {
   margin: 0;
-  color: #1F386B;
-  font-size: 16px;
-  font-family: "Nunito Sans", sans-serif;
 }
 .faresignaler button {
   all: unset;
@@ -169,23 +170,20 @@ nav img:hover {
   position: absolute;
   left: 50%;
   bottom: 100%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
   width: 270px;
   padding: 1rem;
   background-color: #D4E5F7;
-  color: #1F386B;
   border: 1.5px solid #F52D00;
   border-radius: 8px;
-  transition: opacity 0.2s ease;
-  z-index: 10;
+  z-index: 2;
 }
 .faresignaler:hover {
   background: #D4E5F7;
-  transition: 0.3s ease-in-out;
+  animation-play-state: paused;
 }
 .faresignaler.is-open {
   background: #D4E5F7;
-  transition: 0.3s ease-in-out;
 }
 
 .faresignaler.is-open p {
@@ -234,10 +232,7 @@ nav img:hover {
     transform: scale(1);
   }
 }
-.faresignaler:hover {
-  animation-play-state: paused;
-}
-
+/*Forgrenet scenaie*/
 .stage {
   width: min(90vw, 1100px);
   min-height: auto;
@@ -256,13 +251,9 @@ nav img:hover {
   font-size: 18px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
-  color: #1F386B;
   margin: 0 0 0.6em 0;
 }
 .stage p {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 16px;
-  color: #1F386B;
   padding: 0;
   margin: 0.4em auto;
   max-width: 50ch;
@@ -274,9 +265,8 @@ nav img:hover {
 .stage button {
   background-color: transparent;
   border-radius: 30px;
-  border: 1.5px solid #F52D00;
+  border: 1.9px solid #F52D00;
   padding: 0.7em 3em;
-  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #1F386B;
@@ -373,28 +363,11 @@ footer p:hover {
     padding: 1em 1em;
   }
   .faresignaler {
-    width: min(300px, 100%);
+    width: min(330px, 100%);
     box-sizing: border-box;
     text-align: center;
   }
-  .signal-1 {
-    align-self: center;
-  }
-  .signal-2 {
-    align-self: center;
-  }
-  .signal-3 {
-    align-self: center;
-  }
-  .signal-4 {
-    align-self: center;
-  }
-  .signal-5 {
-    align-self: center;
-  }
-  .signal-6 {
-    align-self: center;
-  }
+  /*Forgrenet scenarie*/
   .stage p {
     max-width: 40ch;
   }

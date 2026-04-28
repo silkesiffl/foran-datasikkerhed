@@ -9,12 +9,9 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-   
 
 </head>
-
 <body>
-
     <header>
         <nav>
             <a href="index.html">
@@ -24,16 +21,11 @@
     </header>
 
     <main>
-
         <section class="hero">
-
 <!--Jeg ønskede at bruge det specialdesignede Foran-logo i heroen, som er lavet som SVG og derfor ikke kan skrives som almindelig tekst uden at miste det visuelle udtryk.
 Derfor har jeg lavet en separat h1 med classen sr-only, så hovedoverskriften stadig findes som rigtig tekst i HTML'en og kan læses af skærmlæsere.
 Den synlige version med logoet og de animerede ord er skjult for skærmlæsere med aria-hidden="true", så indholdet ikke bliver læst dobbelt.-->
-
-
             <h1 class="sr-only">Foran phishing</h1>
-
             <div class="visual-heading" aria-hidden="true">
                 <img src="img/foranlogo2.svg" alt="">
                 <span class="changing-word">
@@ -44,99 +36,83 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
             </div>
 
             <div class="hero-content">
-
                 <p>Hvert år bliver mange unge udsat for phishing og online snyd. Svindlerne bliver dygtigere, og metoderne mere overbevisende. Det er sværere end nogensinde før at gennemskue, hvad der er ægte. Foran hjælper dig med at spotte faresignalerne, så du bedre kan beskytte dig selv og være <span class="marker"> et skridt foran svindlerne.</span> </p>
-
                 <img src="img/se-mere.svg" alt="">
             </div>
         </section>
 
         <section class="hvad-er info-section">
-
             <h2>Hvad er phishing?</h2>
-
             <p>Phishing er en form for digital svindel, hvor svindlere forsøger at lokke personlige oplysninger ud af dig ved at udgive sig for at være nogen, du stoler på. Det kan for eksempel være en bank, en webshop eller en offentlig myndighed. Beskederne ser ofte ægte ud og er lavet til at få dig til at handle hurtigt, før du når at tænke dig om.
             </p>
-
             <p>Du kan for eksempel få en sms om, at dit sygesikringskort skal fornyes, og at du skal betale 20 kr. via et link for at få det sendt. Det virker realistisk og harmløst, men linket fører ikke til en rigtig løsning. I stedet er det en fælde, hvor svindlere forsøger at stjæle dine kortoplysninger og misbruge dem.</p>
         </section>
 
         <section class="hvorfor-virker-det info-section">
-
             <h2>Hvorfor virker det?</h2>
-
             <p>Phishing virker, fordi svindlerne er gode til at spille på følelser og skabe troværdighed. Beskederne er ofte lavet, så de ligner noget, du kender i forvejen, som en bank, en myndighed eller en leveringstjeneste. Samtidig prøver de at få dig til at reagere hurtigt ved at skabe stress, frygt eller nysgerrighed.</p>
-
             <p>Hvis du for eksempel får en besked om, at din konto bliver lukket, at en pakke ikke kan leveres, eller at du skal handle med det samme, er der større chance for, at du klikker uden at tænke nærmere over det. Phishing virker altså ikke, fordi folk er naive, men fordi svindlen er designet til at føles ægte og presse dig til at reagere hurtigt.</p>
         </section>
 
         <section class="faresignaler-intro info-section">
-
             <h2>Typiske faresignaler</h2>
-
-            <p>Phishing er svær at spotte, men her er de typiske faresignaler, du kan holde øje med.</p>
-       
+            <p>Phishing er svær at spotte, men her er de typiske faresignaler, du kan holde øje med. Klik på boksene for at læse mere.</p>
         </section>
 
-<section class="faresignaler-grid"> 
+        <section class="faresignaler-grid"> 
+            <div class="faresignaler signal-1">
+                <h3>
+                <button class="button-faresignaler" type="button" aria-expanded="false">Mærkelig afsender</button>
+                </h3>
+                <p>Tjek hvem beskeden egentlig kommer fra. Navnet kan se rigtigt ud, men mailadressen eller nummeret kan være mistænkeligt.</p>
+            </div>
 
- <div class="faresignaler signal-1">
-    <h3>
-        <button class="button-faresignaler" type="button" aria-expanded="false">Mærkelig afsender</button>
-    </h3>
-    <p>Tjek hvem beskeden egentlig kommer fra. Navnet kan se rigtigt ud, men mailadressen eller nummeret kan være mistænkeligt.</p>
-</div>
 
+            <div class="faresignaler signal-2">
+                <h3>
+                <button class="button-faresignaler" type="button" aria-expanded="false">Pres til at handle hurtigt</button>
+                </h3>
+                <p>Beskeden kan få det til at lyde akut, for eksempel at en pakke er tilbageholdt eller en konto bliver lukket. Tag en pause og overvej, om beskeden faktisk giver mening.</p>
+            </div>
 
-<div class="faresignaler signal-2">
-  <h3>
-    <button class="button-faresignaler" type="button" aria-expanded="false">Pres til at handle hurtigt</button>
-  </h3>
-  <p>Beskeden kan få det til at lyde akut, for eksempel at en pakke er tilbageholdt eller en konto bliver lukket. Tag en pause og overvej, om beskeden faktisk giver mening.</p>
-</div>
+            <div class="faresignaler signal-3">
+                <h3>
+                <button class="button-faresignaler" type="button" aria-expanded="false">Beder om personlige oplysninger</button>
+                </h3>
+                <p>Vær ekstra opmærksom, hvis du bliver bedt om adgangskoder, kortoplysninger eller MitID.</p>
+            </div>
 
-<div class="faresignaler signal-3">
-  <h3>
-    <button class="button-faresignaler" type="button" aria-expanded="false">Beder om personlige oplysninger</button>
-  </h3>
-  <p>Vær ekstra opmærksom, hvis du bliver bedt om adgangskoder, kortoplysninger eller MitID.</p>
-</div>
+            <div class="faresignaler signal-4">
+                <h3>
+                <button class="button-faresignaler" type="button" aria-expanded="false">Se på helheden</button>
+                </h3>
+                <p>Det er ikke nok, at én ting virker troværdig. Kig både på afsender, link, og hvad du bliver bedt om i beskeden.</p>
+            </div>
 
-<div class="faresignaler signal-4">
-  <h3>
-    <button class="button-faresignaler" type="button" aria-expanded="false">Se på helheden</button>
-  </h3>
-  <p>Det er ikke nok, at én ting virker troværdig. Kig både på afsender, link, og hvad du bliver bedt om i beskeden.</p>
-</div>
+            <div class="faresignaler signal-5">
+                <h3>
+                <button class="button-faresignaler" type="button" aria-expanded="false">Mistænkelige links</button>
+                </h3>
+                <p>Et link kan ligne noget ægte, men føre til en falsk side. Hold øje med mærkelige webadresser eller små ændringer i navnet.</p>
+            </div>
 
-<div class="faresignaler signal-5">
-  <h3>
-    <button class="button-faresignaler" type="button" aria-expanded="false">Mistænkelige links</button>
-  </h3>
-  <p>Et link kan ligne noget ægte, men føre til en falsk side. Hold øje med mærkelige webadresser eller små ændringer i navnet.</p>
-</div>
-
-<div class="faresignaler signal-6">
-  <h3>
-    <button class="button-faresignaler" type="button" aria-expanded="false">Uventet betaling eller handling</button>
-  </h3>
-  <p>Vær skeptisk, hvis du pludselig skal betale noget, bekræfte en konto eller gøre noget, du ikke havde regnet med.</p>
-</div>
-
+            <div class="faresignaler signal-6">
+                <h3>
+                <button class="button-faresignaler" type="button" aria-expanded="false">Uventet betaling eller handling</button>
+                </h3>
+                <p>Vær skeptisk, hvis du pludselig skal betale noget, bekræfte en konto eller gøre noget, du ikke havde regnet med.</p>
+            </div>
         </section>
         
-<!--Forgrenet scenarie section-->
-
+    <!--Forgrenet scenarie section-->
         <section class="info-section">
-
             <h2>Ville du selv opdage det?</h2>
             <p>Prøv vores interaktive scenarie og oplev, hvordan virkelige svindlere forsøger at lokke dig i fælden. Bliv bedre til at genkende faresignalerne og kom foran svindlerne.</p>
         </section>
 
-<!--Forgrenet scenarie-->
-
+    <!--Forgrenet scenarie-->
         <section class="stage active">
-                <h2>Test dig selv, og se om du kan gennemsku phishing</h2>
+                <h2>Kan du spotte phishing? Test dig selv her</h2>
                 <button class="btn">Start nu</button>
         </section>
 
@@ -164,6 +140,7 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
             <div class="choices">
                 <button class="btn">A) Afsender ser rigtig ud, så jeg indtaster mine oplysninger og trykker godkend</button>
                 <button class="btn">B) Det virker mistænkeligt, at jeg skal betale et ekstra gebyr, så jeg tjekker DAO’s hjemmeside i stedet</button>
+            </div>
         </section>
 
          <section class="stage">
@@ -179,8 +156,6 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
                 <p>Det viser sig, at beskeden var svindel, selvom den lå i samme tråd som rigtige DAO-beskeder. Derfor er det vigtigt altid at tjekke virksomhedens hjemmeside direkte, før du deler private oplysninger.</p>
                 <button class="btn">Start forfra</button>
         </section>
-
-
     </main>
 
     <footer>
@@ -188,6 +163,5 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
         <p>Riensgade 12, København</p>
         <p>+45 21345377</p>
     </footer>
-    
 </body>
 </html>
