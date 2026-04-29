@@ -1,0 +1,27 @@
+/*Variables*/
+$text-color: #1F386B;
+$accent-color: #F52D00;
+$button-hover: #D4E5F7; 
+$font-body: "Nunito Sans", sans-serif;
+$font-heading: "Hanken Grotesk", sans-serif;
+$font-body-size: 16px;
+$breakpoint-mobile: 768px;
+
+/*Mixin er valgt til knapperne, da grundstylingen af dem går igen*/
+@mixin btn($padding: 0.4em 0.8em, $text-align: center, $border-radius: 30px){
+    background-color: transparent;
+    border: 2px solid $accent-color;
+    color: $text-color;
+    font-family: $font-heading;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: $border-radius;
+    padding: $padding;
+    text-align: $text-align;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $button-hover;
+        transition: 0.3s ease-in-out;
+    }
+}

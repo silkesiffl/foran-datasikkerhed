@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Variables*/
+/*Mixin er valgt til knapperne, da grundstylingen af dem går igen*/
 body {
   background: linear-gradient(45deg, #D4E5F7, #ADCDF4, #78B3ED);
   margin: 0;
@@ -141,28 +142,29 @@ nav img:hover {
 }
 
 .faresignaler {
-  border: 1.8px solid #F52D00;
-  border-radius: 12px;
   justify-self: center;
   align-self: center;
-  padding: 0.5rem 1rem;
   position: relative;
   animation: float 4s ease-in-out infinite;
-  transition: background 0.3s ease-in-out;
 }
 .faresignaler h3 {
   margin: 0;
 }
 .faresignaler button {
-  all: unset;
+  background-color: transparent;
+  border: 2px solid #F52D00;
+  color: #1F386B;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.4em 0.8em;
+  text-align: center;
   cursor: pointer;
 }
-.faresignaler {
-  /*Så tasteturbrugere stadigvæk kan se knapperne efter der er brugt all: unset;*/
-}
-.faresignaler button:focus-visible {
-  outline: 2px solid #F52D00;
-  outline-offset: 4px;
+.faresignaler button:hover {
+  background-color: #D4E5F7;
+  transition: 0.3s ease-in-out;
 }
 .faresignaler p {
   opacity: 0;
@@ -179,13 +181,8 @@ nav img:hover {
   z-index: 2;
 }
 .faresignaler:hover {
-  background: #D4E5F7;
   animation-play-state: paused;
 }
-.faresignaler.is-open {
-  background: #D4E5F7;
-}
-
 .faresignaler.is-open p {
   opacity: 1;
   visibility: visible;
@@ -238,7 +235,7 @@ nav img:hover {
   min-height: auto;
   text-align: center;
   background-color: rgba(120, 179, 237, 0.35);
-  border-radius: 16px;
+  border-radius: 50px;
   margin: 0 auto 1.5em auto;
   padding: 2em 1em;
   box-sizing: border-box;
@@ -264,29 +261,47 @@ nav img:hover {
 }
 .stage button {
   background-color: transparent;
-  border-radius: 30px;
-  border: 1.9px solid #F52D00;
-  padding: 0.7em 3em;
-  font-size: 16px;
-  font-weight: 700;
+  border: 2px solid #F52D00;
   color: #1F386B;
-  margin-top: 1.2em;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.5em 3em;
+  text-align: center;
   cursor: pointer;
 }
 .stage button:hover {
-  background: #D4E5F7;
+  background-color: #D4E5F7;
   transition: 0.3s ease-in-out;
+}
+.stage button {
+  margin-top: 1em;
 }
 
 .choices {
   margin-top: 1.5em;
 }
-.choices .btn {
+.choices button {
+  background-color: transparent;
+  border: 2px solid #F52D00;
+  color: #1F386B;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.7em 1.5em;
+  text-align: left;
+  cursor: pointer;
+}
+.choices button:hover {
+  background-color: #D4E5F7;
+  transition: 0.3s ease-in-out;
+}
+.choices button {
   display: block;
   width: min(90%, 700px);
   margin: 1em auto 0 auto;
-  text-align: left;
-  padding: 0.7em 1.5em;
 }
 
 /*Footer*/
@@ -294,7 +309,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0.5em 2.5em;
-  border-top: 1px solid #1F386B;
+  border-top: 1px solid #081021;
 }
 footer p {
   color: #1F386B;

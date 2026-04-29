@@ -1,19 +1,11 @@
-/*Variables*/
-$text-color: #1F386B;
-$text-hover:#081021; 
-$accent-color: #F52D00;
-$font-body: "Nunito Sans", sans-serif;
-$font-heading: "Hanken Grotesk", sans-serif;
-$font-body-size: 16px;
-$button-hover: #D4E5F7; 
-$breakpoint-mobile: 768px;
+@use 'partials';
 
 body{
     background: linear-gradient(45deg, #D4E5F7, #ADCDF4, #78B3ED);
     margin: 0;
-    font-family: $font-body;
-    font-size: $font-body-size;
-    color: $text-color;
+    font-family: partials.$font-body;
+    font-size: partials.$font-body-size;
+    color: partials.$text-color;
 }
 
 /*Nav*/
@@ -63,10 +55,10 @@ nav{
     height: 1.2em;
     width: 132px;
     text-align: right;
-    font-family: $font-body;
+    font-family: partials.$font-body;
     font-size: 32px;
     font-style: italic;
-    color: $text-color;
+    color: partials.$text-color;
     margin-left: 2.5em;
     span {
     position: absolute;
@@ -124,7 +116,7 @@ nav{
     
     p{
         grid-area: tekst;
-        color: $text-color;
+        color: partials.$text-color;
         align-self: center;
         line-height: 1.6;
         font-size: 18px;
@@ -141,11 +133,11 @@ nav{
 /*Tekst section*/
 .info-section{
     padding: 2em 4em;
-    color: $text-color;
+    color: partials.$text-color;
     max-width: 120ch;
 
     h2{
-      font-family: $font-heading;
+      font-family: partials.$font-heading;
       font-weight: 600;
       font-size: 26px;
     }
@@ -159,28 +151,17 @@ nav{
 }
 
 .faresignaler {
-  border: 1.8px solid $accent-color;
-  border-radius: 12px;
   justify-self: center;
   align-self: center;
-  padding: 0.5rem 1rem;
   position: relative;
   animation: float 4s ease-in-out infinite;
-  transition: background 0.3s ease-in-out;
 
   h3{
     margin: 0;
   }
 
   button{
-      all: unset;
-      cursor: pointer;
-    }
-
-/*Så tasteturbrugere stadigvæk kan se knapperne efter der er brugt all: unset;*/
-    button:focus-visible {
-      outline: 2px solid $accent-color;
-      outline-offset: 4px;
+    @include partials.btn($border-radius: 12px);
     }
 
   p {
@@ -192,25 +173,21 @@ nav{
     transform: translateX(-50%);
     width: 270px;
     padding: 1rem;
-    background-color: $button-hover;
-    border: 1.5px solid $accent-color;
+    background-color: partials.$button-hover;
+    border: 1.5px solid partials.$accent-color;
     border-radius: 8px;
     z-index: 2;
   }
 
   &:hover{
-    background: $button-hover;
     animation-play-state: paused;
   }
-   &.is-open {
-    background: $button-hover;
+   &.is-open p{
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-.faresignaler.is-open p {
-  opacity: 1;
-  visibility: visible;
-}
 .signal-1{
     grid-area: 2 / 1 / 3 / 2;
 }
@@ -262,7 +239,7 @@ nav{
   min-height: auto;
   text-align: center;
   background-color: rgba(120, 179, 237, 0.35);
-  border-radius: 16px;
+  border-radius: 50px;
   margin: 0 auto 1.5em auto;
   padding: 2em 1em;
   box-sizing: border-box;
@@ -274,7 +251,7 @@ nav{
 
   h2 {
     font-size: 18px;
-    font-family: $font-body;
+    font-family: partials.$font-body;
     font-weight: 600;
     margin: 0 0 0.6em 0;
    
@@ -292,32 +269,19 @@ nav{
   }
 
   button {
-    background-color: transparent;
-    border-radius: 30px;
-    border: 1.9px solid $accent-color;
-    padding: 0.7em 3em;
-    font-size: $font-body-size;
-    font-weight: 700;
-    color: $text-color;
-    margin-top: 1.2em;
-    cursor: pointer;
-
-    &:hover {
-      background: $button-hover;
-      transition: 0.3s ease-in-out;
-    }
+   @include partials.btn($padding: 0.5em 3em);
+   margin-top: 1em;
   }
 }
 
 .choices {
   margin-top: 1.5em;
 
-  .btn {
+  button{
+    @include partials.btn($text-align: left, $padding: 0.7em 1.5em);
     display: block;
     width: min(90%, 700px);
     margin: 1em auto 0 auto;
-    text-align: left;
-    padding: 0.7em 1.5em;
   }
 }
 
@@ -326,19 +290,19 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 0.5em 2.5em;
-    border-top: 1px solid $text-color;
+    border-top: 1px solid #081021;
         
     p{
-        color: $text-color;
+        color: partials.$text-color;
     }
 
     p:hover{
-        color: $text-hover;
+        color: #081021;
     }
 }
 
 /*Mobil version*/
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: partials.$breakpoint-mobile) {
 
   .hero{
     padding: 1em 2em;
@@ -382,7 +346,7 @@ footer{
   bottom: -0.25em;
   width: 100%;
   height: 3px;
-  background: $accent-color;
+  background: partials.$accent-color;
   border-radius: 10px;
   transform: rotate(-1.5deg);
 }
@@ -394,7 +358,7 @@ footer{
   max-width: 50ch;
 
     h2{
-      font-family: $font-heading;
+      font-family: partials.$font-heading;
       font-weight: 550;
       font-size: 20px;
     }
@@ -426,7 +390,6 @@ footer{
   justify-content: flex-start;
   padding: 0.5em 1em;
 }
-
 }
 
 
