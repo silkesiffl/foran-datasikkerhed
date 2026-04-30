@@ -41,32 +41,34 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
             </div>
         </section>
 
-        <section class="hvad-er info-section">
+        <!--Info sektion-->
+        <section class="info-section">
             <h2>Hvad er phishing?</h2>
             <p>Phishing er en form for digital svindel, hvor svindlere forsøger at lokke personlige oplysninger ud af dig ved at udgive sig for at være nogen, du stoler på. Det kan for eksempel være en bank, en webshop eller en offentlig myndighed. Beskederne ser ofte ægte ud og er lavet til at få dig til at handle hurtigt, før du når at tænke dig om.
             </p>
             <p>Du kan for eksempel få en sms om, at dit sygesikringskort skal fornyes, og at du skal betale 20 kr. via et link for at få det sendt. Det virker realistisk og harmløst, men linket fører ikke til en rigtig løsning. I stedet er det en fælde, hvor svindlere forsøger at stjæle dine kortoplysninger og misbruge dem.</p>
         </section>
 
-        <section class="hvorfor-virker-det info-section">
+        <section class="info-section">
             <h2>Hvorfor virker det?</h2>
             <p>Phishing virker, fordi svindlerne er gode til at spille på følelser og skabe troværdighed. Beskederne er ofte lavet, så de ligner noget, du kender i forvejen, som en bank, en myndighed eller en leveringstjeneste. Samtidig prøver de at få dig til at reagere hurtigt ved at skabe stress, frygt eller nysgerrighed.</p>
             <p>Hvis du for eksempel får en besked om, at din konto bliver lukket, at en pakke ikke kan leveres, eller at du skal handle med det samme, er der større chance for, at du klikker uden at tænke nærmere over det. Phishing virker altså ikke, fordi folk er naive, men fordi svindlen er designet til at føles ægte og presse dig til at reagere hurtigt.</p>
         </section>
 
-        <section class="faresignaler-intro info-section">
+        <section class="info-section">
             <h2>Typiske faresignaler</h2>
             <p>Phishing er svær at spotte, men her er de typiske faresignaler, du kan holde øje med. Klik på boksene for at læse mere.</p>
         </section>
 
+        <!--Faresignaler sektion-->
         <section class="faresignaler-grid"> 
+        <!-- Faresignalerne er lavet som buttons med aria-expanded, så de er klikbare, kan åbne yderligere forkalring og er mere tilgængelige for tastatur og skærmlæsere-->
             <div class="faresignaler signal-1">
                 <h3>
                 <button class="button-faresignaler" type="button" aria-expanded="false">Mærkelig afsender</button>
                 </h3>
                 <p>Tjek hvem beskeden egentlig kommer fra. Navnet kan se rigtigt ud, men mailadressen eller nummeret kan være mistænkeligt.</p>
             </div>
-
 
             <div class="faresignaler signal-2">
                 <h3>
@@ -104,7 +106,7 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
             </div>
         </section>
         
-    <!--Forgrenet scenarie section-->
+    <!--Forgrenet scenarie sektion-->
         <section class="info-section">
             <h2>Ville du selv opdage det?</h2>
             <p>Prøv vores interaktive scenarie og oplev, hvordan virkelige svindlere forsøger at lokke dig i fælden. Bliv bedre til at genkende faresignalerne og kom foran svindlerne.</p>
@@ -113,13 +115,13 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
     <!--Forgrenet scenarie-->
         <section class="stage active">
                 <h2>Kan du spotte phishing? Test dig selv her</h2>
-                <button class="btn">Start nu</button>
+                <button class="btn" type="button">Start nu</button>
         </section>
 
          <section class="stage">
                 <h2>Din bedste ven har fødselsdag om to dage</h2>
                 <p>Du har bestilt en gave online, og venter nu på at DAO leverer pakken.</p>
-                <button class="btn">Fortsæt</button>
+                <button class="btn" type="button">Fortsæt</button>
         </section>
 
          <section class="stage">
@@ -128,8 +130,8 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
                 <p>“Din pakke er tilbageholdt på grund af manglende vejnummer på pakken. Opdater venligst dine forsendelsesoplysninger:https://dao-ak.com/A/S. Vh DAO.”</p>
                 <p class="bold-text">Hvad gør du?</p>
             <div class="choices">
-                <button class="btn">A) Beskeden ligger i samme tråd som tidligere DAO-beskeder, så jeg klikker på linket</button>
-                <button class="btn">B) Noget virker mærkeligt, så jeg tjekker DAO’s hjemmeside i stedet</button>
+                <button class="btn" type="button">A) Beskeden ligger i samme tråd som tidligere DAO-beskeder, så jeg klikker på linket</button>
+                <button class="btn" type="button">B) Noget virker mærkeligt, så jeg tjekker DAO’s hjemmeside i stedet</button>
             </div>
         </section>
 
@@ -138,8 +140,8 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
                 <p>Under linket står der, at de mangler din adresse og et gebyr på 5 kr for at opdatere oplysningerne.</p>
                 <p class="bold-text">Hvad gør du?</p>
             <div class="choices">
-                <button class="btn">A) Afsender ser rigtig ud, så jeg indtaster mine oplysninger og trykker godkend</button>
-                <button class="btn">B) Det virker mistænkeligt, at jeg skal betale et ekstra gebyr, så jeg tjekker DAO’s hjemmeside i stedet</button>
+                <button class="btn" type="button">A) Afsender ser rigtig ud, så jeg indtaster mine oplysninger og trykker godkend</button>
+                <button class="btn" type="button">B) Det virker mistænkeligt, at jeg skal betale et ekstra gebyr, så jeg tjekker DAO’s hjemmeside i stedet</button>
             </div>
         </section>
 
@@ -147,14 +149,14 @@ Den synlige version med logoet og de animerede ord er skjult for skærmlæsere m
                 <h2>Du tjekker DAO's hjemmeside</h2>
                 <p>Du kommer ind på DAO’s hjemmeside, og der står ingenting om manglende leveringsoplysninger, kun at pakken stadig er på vej.</p>
                 <p>Godt valgt! Selvom beskeden ligger i samme SMS-tråd som tidligere ægte beskeder fra DAO, betyder det ikke nødvendigvis, at den nye besked også er sendt af DAO. Svindlere kan sende falske beskeder som kan placere sig i samme tråd som rigtige beskeder gennem SMS-spoofing.</p>
-                <button class="btn">Start forfra</button>
+                <button class="btn" type="button">Start forfra</button>
         </section>
 
         <section class="stage">
                 <h2>Du indtaster dine betalingsoplysninger og trykker godkend</h2>
                 <p>Du får besked om, at dine oplysninger er opdateret, og at pakken er på vej. Kort tid efter opdager du dog mistænkelige træk på dit kort.</p>
                 <p>Det viser sig, at beskeden var svindel, selvom den lå i samme tråd som rigtige DAO-beskeder. Derfor er det vigtigt altid at tjekke virksomhedens hjemmeside direkte, før du deler private oplysninger.</p>
-                <button class="btn">Start forfra</button>
+                <button class="btn" type="button">Start forfra</button>
         </section>
     </main>
 

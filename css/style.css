@@ -79,6 +79,7 @@ nav img:hover {
   animation-delay: 6s;
 }
 
+/*Hero changing words animation*/
 @keyframes changeWord {
   0% {
     opacity: 0;
@@ -135,6 +136,7 @@ nav img:hover {
 }
 
 /*Faresignaler*/
+/*Grid bruges på desktop for at sprede faresignalerne ud og give dem faste placeringer i layoutet*/
 .faresignaler-grid {
   display: grid;
   grid-template: repeat(6, 1fr)/repeat(3, 1fr);
@@ -156,7 +158,7 @@ nav img:hover {
   color: #1F386B;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 550;
   border-radius: 12px;
   padding: 0.4em 0.8em;
   text-align: center;
@@ -265,7 +267,7 @@ nav img:hover {
   color: #1F386B;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 550;
   border-radius: 30px;
   padding: 0.5em 3em;
   text-align: center;
@@ -288,7 +290,7 @@ nav img:hover {
   color: #1F386B;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 550;
   border-radius: 30px;
   padding: 0.7em 1.5em;
   text-align: left;
@@ -320,6 +322,7 @@ footer p:hover {
 
 /*Mobil version*/
 @media (max-width: 768px) {
+  /*Hero section*/
   .hero {
     padding: 1em 2em;
     margin-top: 5em;
@@ -345,6 +348,7 @@ footer p:hover {
   .hero-content img {
     display: none;
   }
+  /*Tilføjet en understreg i accentfarven af designmæssige årsager, da hero img ikke passede ind på mobil*/
   .marker {
     position: relative;
     display: inline-block;
@@ -378,9 +382,11 @@ footer p:hover {
     padding: 1em 1em;
   }
   .faresignaler {
-    width: min(330px, 100%);
+    width: min(300px, 100%);
     box-sizing: border-box;
-    text-align: center;
+  }
+  .faresignaler button {
+    width: 100%;
   }
   /*Forgrenet scenarie*/
   .stage p {

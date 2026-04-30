@@ -81,6 +81,7 @@ nav{
 }
 }
 
+/*Hero changing words animation*/
 @keyframes changeWord {
   0% {
     opacity: 0;
@@ -144,6 +145,7 @@ nav{
 }
 
 /*Faresignaler*/
+/*Grid bruges på desktop for at sprede faresignalerne ud og give dem faste placeringer i layoutet*/
 .faresignaler-grid{
     display: grid;
     grid-template: repeat(6, 1fr) / repeat(3, 1fr);
@@ -304,6 +306,7 @@ footer{
 /*Mobil version*/
 @media (max-width: partials.$breakpoint-mobile) {
 
+  /*Hero section*/
   .hero{
     padding: 1em 2em;
     margin-top: 5em;
@@ -334,11 +337,11 @@ footer{
     }
   }
 
+/*Tilføjet en understreg i accentfarven af designmæssige årsager, da hero img ikke passede ind på mobil*/
 .marker {
   position: relative;
   display: inline-block;
 }
-
 .marker::after {
   content: "";
   position: absolute;
@@ -350,7 +353,6 @@ footer{
   border-radius: 10px;
   transform: rotate(-1.5deg);
 }
-
 
 /*Tekst section*/
 .info-section{
@@ -373,9 +375,12 @@ footer{
   }
 
 .faresignaler {
-    width: min(330px, 100%);
+    width: min(300px, 100%);
     box-sizing: border-box;
-    text-align: center;
+
+    button{
+      width: 100%;
+    }
   }
 
 /*Forgrenet scenarie*/

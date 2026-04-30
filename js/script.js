@@ -1,14 +1,15 @@
 // Faresignal knapper
-// Finder alle faresignal-knapper
+//Finder alle med klassen .button-faresignaler på siden
 const buttons = document.querySelectorAll(".button-faresignaler");
 
-// Tilføjer et klik-event til hver knap
+// Tilføjer et klik-event til hver knap så den tilhørende forklaring kan åbnes/lukkes
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const faresignal = button.closest(".faresignaler");
 
     faresignal.classList.toggle("is-open");
-
+    
+    //Opdaterer aria-expanded, så  skærmlæsere kan se om boksen er åben/lukket
     const isOpen = faresignal.classList.contains("is-open");
     button.setAttribute("aria-expanded", isOpen);
   });
@@ -16,15 +17,14 @@ buttons.forEach((button) => {
 
 
 //Forgrenet scenarie 
+//Finder alle med klassen .btn under .stage og finder alle .stage
 const btns = document.querySelectorAll(".stage .btn")
 const stages = document.querySelectorAll(".stage")
 
-//Funktioner i midten (er afhængig af variabler)
+//Skifter mellem scenariets stages alt efter hvilken knap der er trykket på
 const nextStage = (e) =>{
-    console.log(e.target.textContent) //Kan slettes når den har været brugt til at teste om der er forbindelse
     switch(e.target.textContent) {
-        case "Start nu": //Husk vores case værdi "Start" skal skrives præcis som skrevet i HTML
-            console.log("Start button was clicked"); //Kan kommenteres ud fordi vi har brugt den til test
+        case "Start nu": 
             stages[0].classList.remove("active"); //Fjerner vores første stage
             stages[1].classList.add("active"); // Gør vores anden stage synlig ved at tilføje active
         break;
@@ -57,8 +57,7 @@ const nextStage = (e) =>{
 
     }
 }
-
-//Event listeners i bunden (er afhængige af variabler og funktioner)
+//Tilføjer klik event til knapperne i sceanriet
 for (const btn of btns) {
     btn.addEventListener("click", nextStage)
 }
